@@ -308,3 +308,5 @@ if 'BITBUCKET_CONSUMER_KEY' in os.environ:
     BITBUCKET_CONSUMER_SECRET = env('BITBUCKET_CONSUMER_SECRET')
 
 INSTALLED_APPS += ('sentry_telegram',)
+SENTRY_FEATURES['auth:register'] = False
+SENTRY_PUBLIC = False

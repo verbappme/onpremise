@@ -1,4 +1,4 @@
-REPOSITORY?=sentry-onpremise
+REPOSITORY?=188.166.50.74:5000/sentry
 TAG?=latest
 
 OK_COLOR=\033[32;01m
@@ -15,6 +15,7 @@ $(REPOSITORY)_$(TAG).tar: build
 push: build
 	@echo "$(OK_COLOR)==>$(NO_COLOR) Pushing $(REPOSITORY):$(TAG)"
 	@docker push $(REPOSITORY):$(TAG)
+	
 
 all: build push
 
